@@ -42,6 +42,10 @@ describe formatted sample_data;
 ...
 */
 
+/* TK: script this in a reliable way, to work regardless of HDFS layout. */
+
 !hdfs dfs -put billion_rows.csv '/user/impala/warehouse/oreilly.db/sample_data';
 
+refresh sample_data;
+select count(*) from sample_data;
 
