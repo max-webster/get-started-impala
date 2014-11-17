@@ -1,3 +1,6 @@
+CREATE DATABASE IF NOT EXISTS oreilly;
+USE oreilly;
+
 -- Set up empty partitions.
 ALTER TABLE partitioned_table ADD PARTITION (year=2010, month=1);
 ALTER TABLE partitioned_table ADD PARTITION (year=2010, month=2);

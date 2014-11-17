@@ -1,3 +1,11 @@
+/*
+This file relies on the tables that are created by the insert_partitioned.sql script.
+Run that other script first.
+*/
+
+CREATE DATABASE IF NOT EXISTS oreilly;
+USE oreilly;
+
 SELECT DISTINCT
   concat('insert into partitioned_table partition (year=',
     cast(year as string),', month=',cast(month as string),

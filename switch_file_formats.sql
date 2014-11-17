@@ -1,3 +1,10 @@
+CREATE DATABASE IF NOT EXISTS oreilly;
+USE oreilly;
+
+/*
+TK: Tear the tables down afterwards.
+*/
+
 CREATE TABLE t2 LIKE t1;
 -- Copy the data, preserving the original file format.
 INSERT INTO t2 SELECT * FROM t1;

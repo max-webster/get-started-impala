@@ -1,3 +1,6 @@
+CREATE DATABASE IF NOT EXISTS oreilly;
+USE oreilly;
+
 CREATE TABLE text_default_separator
   (c1 STRING, c2 STRING, c3 STRING);
 

@@ -1,10 +1,9 @@
 -- impala-shell -i localhost
 
-create database oreilly;
+CREATE DATABASE IF NOT EXISTS oreilly;
+USE oreilly;
 
-use oreilly;
-
-create table sample_data
+create table if not exists sample_data
   (id bigint, val int, zerofill string, name string,
   assertion boolean, city string, state string)
   row format delimited fields terminated by ",";
@@ -26,6 +25,8 @@ desc sample_data;
 */
 
 describe formatted sample_data;
+
+/* Expected output (except that LOCATION will differ for each different system).
 ...
 | # Detailed Table Information | NULL
 | Database:                    | oreilly
@@ -39,6 +40,7 @@ describe formatted sample_data;
 |                              | sample_data
 | Table Type:                  | MANAGED_TABLE
 ...
+*/
 
 !hdfs dfs -put billion_rows.csv '/user/impala/warehouse/oreilly.db/sample_data';
 

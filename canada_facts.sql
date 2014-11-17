@@ -1,3 +1,6 @@
+CREATE DATABASE IF NOT EXISTS oreilly;
+USE oreilly;
+
 -- Set up a table to look up names based on abbreviations.
 CREATE TABLE canada_regions (name STRING, abbr STRING);
 

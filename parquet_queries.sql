@@ -1,3 +1,10 @@
+CREATE DATABASE IF NOT EXISTS oreilly;
+USE oreilly;
+
+/*
+TK: Create the actual tables. Tear them down afterwards.
+*/
+
 -- The query can read all the values of a column without having to
 -- read (and ignore) the values of the other columns in each row.
 SELECT c3 FROM t1;

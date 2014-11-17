@@ -1,5 +1,6 @@
-create database food_colors;
+create database if not exists food_colors;
 use food_colors;
+
 create table food_data
   (id int, color string, food string, weight float)
   row format delimited fields terminated by ',';
